@@ -1,0 +1,17 @@
+<!-- <div *ngIf="errors">
+    <p class="text-danger" *ngFor="let item of errors ">{{item}}</p>
+</div> -->
+    
+    <form (submit)="onSubmit()">
+        <div class="form-group">        
+            <p>Name: <input type="text" name="user.name" [(ngModel)]="user.name" /></p>
+        </div>
+        <div class="form-group">        
+            <p>Email: <input type="text" name="user.email" [(ngModel)]="user.email" /></p>
+        </div>
+      
+       
+        
+        <button  class="btn btn-primary btn-sm" (click)="onSubmit()">Update</button>
+        <button  class="btn btn-danger btn-sm" [routerLink]="['/users']">Cancel</button>
+    </form>
